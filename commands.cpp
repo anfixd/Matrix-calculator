@@ -22,28 +22,79 @@ bool Good(ll id) {
 }
 
 void PrintHelp() {
-    cout << "1. help - show the list of commands\n";
-    cout << "1.1. create N M - create NxM matrix\n";
-    cout << "1.2. resize ID N M - resize matrix ID to size NxM\n";
-    cout << "1.3. fill ID {values} - fill matrix[ID]\n";
-    cout << "1.4. setval ID X Y VAL - set value in matrix[ID] field X Y\n";
-    cout << "1.5. print ID - output the matrix[ID]\n";
-    cout << "1.6. delete ID - delete thematrix[ID]\n";
-    cout << "1.7. setac VAL - Set accuracy to VAL\n";
-    cout << "------------------------------------\n";
-    cout << "2.1. sum ID1 ID2 - calculate the sum of matrix[ID1] and matrix[ID2]\n";
-    cout << "2.2. sub ID1 ID2 - calculate the difference of matrix[ID1] and matrix[ID2]\n";
-    cout << "2.3. mult ID1 ID2 - calculate the product of matrix[ID1] and matrix[ID2]\n";
-    cout << "2.4. pow ID N - calculate a matrix[ID] raised to the power of N\n";
-    cout << "2.5. push - add the current result to the end of the list\n";
-    cout << "------------------------------------\n";
-    cout << "3.1. det ID - calculate the determinant of a matrix[ID]\n";
-    cout << "3.2. rang ID - calculate the rang of a matrix[ID]\n";
-    cout << "3.3. inv ID - calculate the inversed matrix[ID]\n";
-    cout << "3.4. tran ID - calculate the transposed matrix[ID]\n";
-    cout << "------------------------------------\n";
-    cout << "4.1. exit - exit program\n";
-    cout << "------------------------------------\n\n";
+    if (lang == "en") {
+        cout << "1. help - show the list of commands\n";
+        cout << "1.1. create N M - create NxM matrix\n";
+        cout << "1.2. resize ID N M - resize matrix ID to size NxM\n";
+        cout << "1.3. fill ID {values} - fill matrix[ID]\n";
+        cout << "1.4. setval ID X Y VAL - set value in matrix[ID] field X Y\n";
+        cout << "1.5. print ID - output the matrix[ID]\n";
+        cout << "1.6. delete ID - delete the matrix[ID]\n";
+        cout << "1.7. setac VAL - set accuracy to VAL\n";
+        cout << "------------------------------------\n";
+        cout << "2.1. sum ID1 ID2 - calculate the sum of matrix[ID1] and matrix[ID2]\n";
+        cout << "2.2. sub ID1 ID2 - calculate the difference of matrix[ID1] and matrix[ID2]\n";
+        cout << "2.3. mult ID1 ID2 - calculate the product of matrix[ID1] and matrix[ID2]\n";
+        cout << "2.4. pow ID N - calculate a matrix[ID] raised to the power of N\n";
+        cout << "2.5. push - add the current result to the end of the list\n";
+        cout << "------------------------------------\n";
+        cout << "3.1. det ID - calculate the determinant of a matrix[ID]\n";
+        cout << "3.2. rang ID - calculate the rang of a matrix[ID]\n";
+        cout << "3.3. inv ID - calculate the inversed matrix[ID]\n";
+        cout << "3.4. tran ID - calculate the transposed matrix[ID]\n";
+        cout << "------------------------------------\n";
+        cout << "4.1. setloc LG - set localization to LG languange (EN, RU, KG)\n";
+        cout << "4.2. exit - exit program\n";
+        cout << "------------------------------------\n\n";
+    } else if (lang == "ru") {
+        cout << "1. help - показать список комманд\n";
+        cout << "1.1. create N M - создать матрицу размера NxM\n";
+        cout << "1.2. resize ID N M - поменять размер матрицы ID на размер NxM\n";
+        cout << "1.3. fill ID {values} - заполнить матрицу[ID]\n";
+        cout << "1.4. setval ID X Y VAL - задать значение матрицы[ID] поля X Y\n";
+        cout << "1.5. print ID - вывести матрицу[ID]\n";
+        cout << "1.6. delete ID - удалить матрицу[ID]\n";
+        cout << "1.7. setac VAL - установить точность до VAL знаков после запятой\n";
+        cout << "------------------------------------\n";
+        cout << "2.1. sum ID1 ID2 - посчитать сумму матрицы[ID1] и матрицы[ID2]\n";
+        cout << "2.2. sub ID1 ID2 - посчитать разность матрицы[ID1] и матрицы[ID2]\n";
+        cout << "2.3. mult ID1 ID2 - посчитать произведение матрицы[ID1] и матрицы[ID2]\n";
+        cout << "2.4. pow ID N - посчтитать матрицу[ID] в степени N\n";
+        cout << "2.5. push - добавить результат вычисления в конец списка\n";
+        cout << "------------------------------------\n";
+        cout << "3.1. det ID - посчитать определитель матрицы[ID]\n";
+        cout << "3.2. rang ID - почитать ранг матрицы[ID]\n";
+        cout << "3.3. inv ID - посчитать обратную матрицу[ID]\n";
+        cout << "3.4. tran ID - посчитать транспонированную матрицу[ID]\n";
+        cout << "------------------------------------\n";
+        cout << "4.1. setloc LG - установить локализацию программы (en, ru, kg)\n";
+        cout << "4.2. exit - выйти из программы\n";
+        cout << "------------------------------------\n\n";
+    } else if (lang == "kg") {
+        cout << "1. help - буйруктардын тизмесин көрсөтүү\n";
+        cout << "1.1. create N M - NxM өлчөмүндөгү матрица түзүү\n";
+        cout << "1.2. resize ID N M - ID матрицасынын өлчөмүн NxM кылып өзгөртүү\n";
+        cout << "1.3. fill ID {values} - [ID] матрицасын толтуруу\n";
+        cout << "1.4. setval ID X Y VAL - [ID] матрицасынын X Y уячасына маани коюу\n";
+        cout << "1.5. print ID - [ID] матрицасын чыгаруу\n";
+        cout << "1.6. delete ID - [ID] матрицасын өчүрүү\n";
+        cout << "1.7. setac VAL - үтүрдөн кийин VAL белгиге чейин тактыкты коюу\n";
+        cout << "------------------------------------\n";
+        cout << "2.1. sum ID1 ID2 - [ID1] жана [ID2] матрицаларынын суммасын эсептөө\n";
+        cout << "2.2. sub ID1 ID2 - [ID1] жана [ID2] матрицаларынын айырмасын эсептөө\n";
+        cout << "2.3. mult ID1 ID2 - [ID1] жана [ID2] матрицаларынын көбөйтүндүсүн эсептөө\n";
+        cout << "2.4. pow ID N - [ID] матрицасын N даражасына чыгаруу\n";
+        cout << "2.5. push - эсептөөнүн жыйынтыгын тизменин аягына кошуу\n";
+        cout << "------------------------------------\n";
+        cout << "3.1. det ID - [ID] матрицасынын детерминантын эсептөө\n";
+        cout << "3.2. rang ID - [ID] матрицасынын рангын эсептөө\n";
+        cout << "3.3. inv ID - [ID] матрицасынын тескери матрицасын эсептөө\n";
+        cout << "3.4. tran ID - [ID] матрицасынын транспонирленген матрицасын эсептөө\n";
+        cout << "------------------------------------\n";
+        cout << "4.1. setloc LG - программанын тилин коюу (en, ru, kg)\n";
+        cout << "4.2. exit - программадан чыгуу\n";
+        cout << "------------------------------------\n\n";
+    }
 }
 
 // Команды 1.X
@@ -212,6 +263,18 @@ void CmdInv() {
     }
 }
 
+// Команды 4.X
+
+void CmdSetLocale() {
+    string l; cin >> l;
+    if (l != "en" && l != "ru" && l != "kg") {
+        ThrowError(9);
+    } else {
+        lang = l;
+        ThrowSuccess(0);
+    }
+}
+
 } 
 
 void ProcessCommand() {
@@ -240,6 +303,7 @@ void ProcessCommand() {
     else if (cmd == "tran") CmdTran();
     else if (cmd == "inv") CmdInv();
 
+    else if (cmd == "setloc") CmdSetLocale();
     else if (cmd == "exit") exit(0);
 
     else cout << "Unknown command. Type 'help' for help\n\n";
