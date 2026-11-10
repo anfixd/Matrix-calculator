@@ -190,6 +190,28 @@ void CmdTran() {
     }
 }
 
+void CmdInv() {
+    ll id; cin >> id;
+    if (!Good(id)) {
+        ThrowError(3);
+    } else if (v[id].IsEmpty()) {
+        ThrowError(1);
+    } else {
+        auto [rows, cols] = v[id].GetSize();
+        if (rows != cols) {
+            ThrowError(5);
+        } else {
+            if (DetMatrix(v[id]) == 0) {
+                ThrowError(8);
+            } else {
+                cur = InvertedMatrix(v[id]);
+                ThrowSuccess(0);
+                cur.Print();
+            }
+        }
+    }
+}
+
 } 
 
 void ProcessCommand() {
@@ -216,6 +238,7 @@ void ProcessCommand() {
     else if (cmd == "det") CmdDet();
     else if (cmd == "rang") CmdRang();
     else if (cmd == "tran") CmdTran();
+    else if (cmd == "inv") CmdInv();
 
     else if (cmd == "exit") exit(0);
 

@@ -154,3 +154,19 @@ Matrix TransposedMatrix(Matrix a) {
     }
     return res;
 }
+
+Matrix InvertedMatrix(Matrix a) {
+    auto [n, m] = a.GetSize();
+    Matrix res;
+    res.Resize(n, m);
+    double det = DetMatrix(a);
+    a = TransposedMatrix(a);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            double sign = ((i + j) % 2 == 0 ? 1 : -1);
+            double cofactor = sign * DetMatrix(GetBanned(a, i, j));
+            res.SilentSetVal(i, j, cofactor / det);
+        }
+    }
+    return res;
+}

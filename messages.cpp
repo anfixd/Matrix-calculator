@@ -16,6 +16,7 @@ void ThrowError(ll id) {
         case 5: {cout << "Non-square matrix.\n"; break; }
         case 6: {cout << "Current result is empty.\n"; break; }
         case 7: {cout << "Incorrect accuracy level.\n"; break; }
+        case 8: {cout << "The determinant of the matrix is ​​0. The inverse matrix does not exist.\n"; break; }
 
         default: "";
     }

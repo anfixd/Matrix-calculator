@@ -12,3 +12,4 @@ Matrix GetBanned(Matrix b, ll x, ll y);
 double DetMatrix(Matrix a);
 ll RangMatrix(Matrix a);
 Matrix TransposedMatrix(Matrix a);
+Matrix InvertedMatrix(Matrix a);
