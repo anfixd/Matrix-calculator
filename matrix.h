@@ -15,10 +15,10 @@ class Matrix {
         void Create(ll n, ll m);
         void Resize(ll n, ll m);
         void Fill();
-        void SilentSetVal(ll x, ll y, ll val);
-        void SetVal(ll x, ll y, ll val);
+        void SilentSetVal(ll x, ll y, double val);
+        void SetVal(ll x, ll y, double val);
         void Print();
-        ll GetVal(ll x, ll y);
+        double GetVal(ll x, ll y);
         bool IsEmpty();
         std::pair<ll, ll> GetSize();
 };

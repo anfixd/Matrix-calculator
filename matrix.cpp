@@ -39,13 +39,13 @@ void Matrix::Fill() {
     }
 }
 
-void Matrix::SilentSetVal(ll x, ll y, ll val) {
+void Matrix::SilentSetVal(ll x, ll y, double val) {
     if (x >= 0 && x < N && y >= 0 && y < M) {
         V[x][y] = val;
     }
 }
 
-void Matrix::SetVal(ll x, ll y, ll val) {
+void Matrix::SetVal(ll x, ll y, double val) {
     if (x >= 0 && x < N && y >= 0 && y < M) {
         V[x][y] = val;
         ThrowSuccess(4);
@@ -68,9 +68,9 @@ void Matrix::Print() {
     }
 }
 
-ll Matrix::GetVal(ll x, ll y) {
+double Matrix::GetVal(ll x, ll y) {
     if (x < 0 || x >= N || y < 0 || y >= M) {
-        return 0;
+        return 0.0;
     }
     return V[x][y];
 }
